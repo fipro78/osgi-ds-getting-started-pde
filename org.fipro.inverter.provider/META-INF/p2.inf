@@ -1,0 +1,5 @@
+requires.0.namespace = osgi.extender
+requires.0.name = osgi.component
+requires.0.version = 1.2.0
+provides.1.namespace = osgi.service
+provides.1.name = org.fipro.inverter.StringInverter
