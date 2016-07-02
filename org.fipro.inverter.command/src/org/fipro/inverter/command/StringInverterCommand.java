@@ -20,8 +20,8 @@ public class StringInverterCommand {
 		this.inverter = inverter;
 	}
 
-	void updatedStringInverter(StringInverter inverter) {
-		this.inverter = inverter;
+	void unbindStringInverter(StringInverter inverter) {
+		this.inverter = null;
 	}
 	
 	public void invert(String input) {
