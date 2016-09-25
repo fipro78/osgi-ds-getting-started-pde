@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="org.fipro.ds.configurator.ConfCommand">
+   <property name="osgi.command.scope" value="fipro"/>
+   <property name="osgi.command.function" value="conf"/>
+   <service>
+      <provide interface="org.fipro.ds.configurator.ConfCommand"/>
+   </service>
+   <reference bind="setConfigurationAdmin" cardinality="1..1" interface="org.osgi.service.cm.ConfigurationAdmin" name="ConfigurationAdmin" policy="static"/>
+   <implementation class="org.fipro.ds.configurator.ConfCommand"/>
+</scr:component>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.2.0" name="org.fipro.ds.configurator.DataGetter">
+   <property name="osgi.command.scope" type="String" value="fipro"/>
+   <property name="osgi.command.function" type="String" value="get"/>
+   <service>
+      <provide interface="org.fipro.ds.configurator.DataGetter"/>
+   </service>
+   <reference bind="setDataService" cardinality="1..1" interface="org.fipro.ds.data.DataService" name="DataService" policy="dynamic" policy-option="greedy" unbind="unsetDataService"/>
+   <implementation class="org.fipro.ds.configurator.DataGetter"/>
+</scr:component>
