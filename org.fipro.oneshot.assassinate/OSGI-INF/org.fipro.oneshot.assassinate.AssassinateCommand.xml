@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="org.fipro.oneshot.assassinate.AssassinateCommand">
+   <property name="osgi.command.scope" value="fipro"/>
+   <property name="osgi.command.function" value="assassinate"/>
+   <service>
+      <provide interface="org.fipro.oneshot.assassinate.AssassinateCommand"/>
+   </service>
+   <reference bind="setOneShot" cardinality="1..1" interface="org.fipro.oneshot.OneShot" name="OneShot" policy="static"/>
+   <implementation class="org.fipro.oneshot.assassinate.AssassinateCommand"/>
+</scr:component>

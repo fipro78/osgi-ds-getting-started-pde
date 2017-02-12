@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" name="org.fipro.oneshot.assassinate.EliminateCommand">
+   <property name="osgi.command.scope" value="fipro"/>
+   <property name="osgi.command.function" value="eliminate"/>
+   <service>
+      <provide interface="org.fipro.oneshot.assassinate.EliminateCommand"/>
+   </service>
+   <reference bind="setOneShotReference" cardinality="1..1" interface="org.fipro.oneshot.OneShot" name="hitman" policy="static"/>
+   <implementation class="org.fipro.oneshot.assassinate.EliminateCommand"/>
+</scr:component>
