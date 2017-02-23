@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="org.fipro.oneshot.command.ExecuteCommand">
+   <property name="osgi.command.scope" value="fipro"/>
+   <property name="osgi.command.function" value="execute"/>
+   <service>
+      <provide interface="org.fipro.oneshot.command.ExecuteCommand"/>
+   </service>
+   <reference bind="addBorg" cardinality="0..n" interface="org.fipro.oneshot.OneShot" name="Borg" policy="dynamic" target="(service.factoryPid=org.fipro.oneshot.Borg)" unbind="removeBorg"/>
+   <implementation class="org.fipro.oneshot.command.ExecuteCommand"/>
+</scr:component>
