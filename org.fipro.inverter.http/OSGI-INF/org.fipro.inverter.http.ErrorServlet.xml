@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="org.fipro.inverter.http.ErrorServlet">
+   <property name="osgi.http.whiteboard.servlet.errorPage">java.lang.IllegalArgumentException
+500
+   </property>
+   <service scope="prototype">
+      <provide interface="javax.servlet.Servlet"/>
+   </service>
+   <implementation class="org.fipro.inverter.http.ErrorServlet"/>
+</scr:component>
