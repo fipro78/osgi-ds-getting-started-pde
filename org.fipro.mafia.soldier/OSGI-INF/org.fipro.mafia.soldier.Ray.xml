@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="org.fipro.mafia.soldier.Ray">
+   <property name="event.topics" value="org/fipro/mafia/Boss/*"/>
+   <property name="event.filter" value="(!(target=Sonny))"/>
+   <service>
+      <provide interface="org.osgi.service.event.EventHandler"/>
+   </service>
+   <implementation class="org.fipro.mafia.soldier.Ray"/>
+</scr:component>

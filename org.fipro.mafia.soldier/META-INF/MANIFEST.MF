@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Mafia Soldier
+Bundle-SymbolicName: org.fipro.mafia.soldier
+Bundle-Version: 1.0.0
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: org.fipro.mafia.common;version="[1.0.0,2.0.0)",
+ org.osgi.service.component.annotations;version="[1.3.0,2.0.0)";resolution:=optional,
+ org.osgi.service.event;version="[1.3.0,2.0.0)"
+Service-Component: OSGI-INF/org.fipro.mafia.soldier.Luigi.xml,
+ OSGI-INF/org.fipro.mafia.soldier.Mario.xml,
+ OSGI-INF/org.fipro.mafia.soldier.Giovanni.xml,
+ OSGI-INF/org.fipro.mafia.soldier.Pete.xml,
+ OSGI-INF/org.fipro.mafia.soldier.Ray.xml
+Bundle-ActivationPolicy: lazy
+Require-Capability: osgi.extender;
+ filter:="(&(osgi.extender=osgi.component)(version>=1.3)(!(version>=2.0)))",
+ osgi.service;filter:="(objectClass=org.osgi.service.event.EventAdmin)";effective:=active

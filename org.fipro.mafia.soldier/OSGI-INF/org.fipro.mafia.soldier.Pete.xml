@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="org.fipro.mafia.soldier.Pete">
+   <property name="event.topics">org/fipro/mafia/Boss/CONVINCE
+org/fipro/mafia/Boss/SOLVE
+   </property>
+   <service>
+      <provide interface="org.osgi.service.event.EventHandler"/>
+   </service>
+   <implementation class="org.fipro.mafia.soldier.Pete"/>
+</scr:component>
