@@ -64,7 +64,7 @@ public class MafiaPart {
 		            @Override
 		            public void handleEvent(Event event) {
 		            	// ensure to update the UI in the UI thread
-		            	Display.getDefault().syncExec(() -> handlerLabel.setText(
+		            	Display.getDefault().asyncExec(() -> handlerLabel.setText(
 		            			"Received boss command " 
 		            					+ event.getTopic()
 		            					+ " for target "
