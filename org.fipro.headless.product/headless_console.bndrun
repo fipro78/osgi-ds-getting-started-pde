@@ -1,0 +1,27 @@
+-runee: JavaSE-1.8
+-runfw: org.eclipse.osgi
+-runsystemcapabilities: ${native_capability}
+
+-resolve.effective: active;skip:="osgi.service"
+
+-runrequires: \
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
+	osgi.identity;filter:='(osgi.identity=org.fipro.headless.app)'
+
+-runbundles: \
+	org.fipro.inverter.api,\
+	org.fipro.inverter.command,\
+	org.fipro.inverter.provider,\
+    org.fipro.headless.app,\
+	org.apache.felix.gogo.command,\
+	org.apache.felix.gogo.runtime,\
+	org.apache.felix.gogo.shell,\
+    org.eclipse.equinox.console,\
+    org.eclipse.osgi.services,\
+    org.eclipse.osgi.util,\
+	org.apache.felix.scr
+
+-runproperties:	\
+	osgi.console.enable.builtin=false, \
+	osgi.console=

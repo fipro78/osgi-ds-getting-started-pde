@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Headless App
+Bundle-SymbolicName: org.fipro.headless.app
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: org.fipro.headless.app
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: org.eclipse.osgi.service.environment;version="1.4.0",
+ org.fipro.inverter;version="1.0.0",
+ org.osgi.framework;version="1.9.0",
+ org.osgi.service.component.annotations;version="[1.3.0,2.0.0)";resolution:=optional
+Service-Component: OSGI-INF/org.fipro.headless.app.EquinoxStarter.xml,
+ OSGI-INF/org.fipro.headless.app.BndStarter.xml
+Bundle-ActivationPolicy: lazy

@@ -1,0 +1,16 @@
+-runee: JavaSE-1.8
+-runfw: org.eclipse.osgi
+-runsystemcapabilities: ${native_capability}
+
+-resolve.effective: active;skip:="osgi.service"
+
+-runrequires: \
+	osgi.identity;filter:='(osgi.identity=org.fipro.headless.app)'
+
+-runbundles: \
+	org.fipro.inverter.api,\
+	org.fipro.inverter.provider,\
+    org.fipro.headless.app,\
+    org.eclipse.osgi.services,\
+    org.eclipse.osgi.util,\
+	org.apache.felix.scr

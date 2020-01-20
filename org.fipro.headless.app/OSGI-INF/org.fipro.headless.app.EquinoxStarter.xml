@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" activate="activate" immediate="true" name="org.fipro.headless.app.EquinoxStarter">
+   <reference cardinality="1..1" field="environmentInfo" interface="org.eclipse.osgi.service.environment.EnvironmentInfo" name="environmentInfo"/>
+   <reference cardinality="1..1" field="inverter" interface="org.fipro.inverter.StringInverter" name="inverter"/>
+   <implementation class="org.fipro.headless.app.EquinoxStarter"/>
+</scr:component>
