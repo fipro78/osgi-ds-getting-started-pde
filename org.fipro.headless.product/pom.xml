@@ -46,6 +46,24 @@
 			</plugin>
 			<plugin>
 				<groupId>biz.aQute.bnd</groupId>
+				<artifactId>bnd-indexer-maven-plugin</artifactId>
+				<version>4.3.1</version>
+				<configuration>
+					<!-- <outputFile>${project.build.directory}/custom.xml</outputFile> -->
+					<inputDir>${project.build.directory}/repository/plugins/</inputDir>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<id>index</id>
+						<goals>
+							<goal>local-index</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>			
+			<plugin>
+				<groupId>biz.aQute.bnd</groupId>
 				<artifactId>bnd-export-maven-plugin</artifactId>
 				<version>4.3.1</version>
 				<configuration>
@@ -55,7 +73,7 @@
 						<bndrun>headless_console.bndrun</bndrun>
 					</bndruns>
 					<bundles>
-						<include>target/repository/plugins/*</include>
+						<include>${project.build.directory}/repository/plugins/*</include>
 					</bundles>
 				</configuration>
 				<executions>
