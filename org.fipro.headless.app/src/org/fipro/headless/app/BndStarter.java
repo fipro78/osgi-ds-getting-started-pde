@@ -26,8 +26,9 @@ public class BndStarter {
 	
 	@Activate
 	void activate() {
-		boolean isConsoleConfigured = System.getProperty("osgi.console") != null;
-		
+		String console = System.getProperty("osgi.console");
+		boolean isConsoleConfigured =  console != null && console.length() == 0;
+
 		// clear launcher arguments from possible framework parameter
 		String[] args = Arrays.stream(launcherArgs)
 				.filter(arg -> !"-console".equals(arg) && !"-consoleLog".equals(arg))
