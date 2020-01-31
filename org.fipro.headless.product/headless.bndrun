@@ -1,4 +1,4 @@
-index: target/index.xml;name="org.fibro.headless.product"
+index: target/index.xml;name="org.fipro.headless.product"
 
 -standalone: ${index}
 

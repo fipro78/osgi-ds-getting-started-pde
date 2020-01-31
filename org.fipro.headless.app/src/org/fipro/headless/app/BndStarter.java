@@ -23,14 +23,11 @@ public class BndStarter {
 
 	@Reference
 	StringInverter inverter;
-
+	
 	@Activate
 	void activate() {
 		boolean isConsoleConfigured = System.getProperty("osgi.console") != null;
 		
-		boolean isInteractive = Arrays.stream(launcherArgs)
-				.anyMatch(arg -> "-console".equals(arg));
-
 		// clear launcher arguments from possible framework parameter
 		String[] args = Arrays.stream(launcherArgs)
 				.filter(arg -> !"-console".equals(arg) && !"-consoleLog".equals(arg))
@@ -40,9 +37,8 @@ public class BndStarter {
 			System.out.println(inverter.invert(arg));
 		}
 
-		if (!isConsoleConfigured
-				|| (isConsoleConfigured && !isInteractive)) {
-			// shutdown the application if no console was opened
+		if (!isConsoleConfigured) {
+			// shutdown the application if no console is configured
 			// only needed if osgi.noShutdown=true is configured
 			System.exit(0);
 		}

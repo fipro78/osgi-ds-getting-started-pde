@@ -49,7 +49,6 @@
 				<artifactId>bnd-indexer-maven-plugin</artifactId>
 				<version>4.3.1</version>
 				<configuration>
-					<!-- <outputFile>${project.build.directory}/custom.xml</outputFile> -->
 					<inputDir>${project.build.directory}/repository/plugins/</inputDir>
 				</configuration>
 				<executions>
@@ -71,6 +70,7 @@
 					<bndruns>
 						<bndrun>headless.bndrun</bndrun>
 						<bndrun>headless_console.bndrun</bndrun>
+						<bndrun>headless_configurable.bndrun</bndrun>
 					</bndruns>
 					<bundles>
 						<include>${project.build.directory}/repository/plugins/*</include>

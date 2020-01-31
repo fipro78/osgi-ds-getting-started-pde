@@ -1,14 +1,13 @@
 package org.fipro.inverter.command;
 
-import org.apache.felix.service.command.CommandProcessor;
 import org.fipro.inverter.StringInverter;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
 @Component(
 	property= {
-		CommandProcessor.COMMAND_SCOPE + ":String=fipro",
-		CommandProcessor.COMMAND_FUNCTION + ":String=invert"},
+		"osgi.command.scope:String=fipro",
+		"osgi.command.function:String=invert"},
 	service=StringInverterCommand.class
 )
 public class StringInverterCommand {
