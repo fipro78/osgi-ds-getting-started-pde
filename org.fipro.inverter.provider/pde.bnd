@@ -1,0 +1,8 @@
+Bundle-Name: Inverter Provider
+Bundle-SymbolicName: org.fipro.inverter.provider
+Bundle-Vendor: 
+Bundle-Version: 1.0.0.qualifier
+Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: org.fipro.inverter.provider
+-buildpath: \
+    org.fipro.inverter.api

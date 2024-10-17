@@ -12,16 +12,8 @@ import org.osgi.service.component.annotations.Reference;
 )
 public class StringInverterCommand {
 
-	private StringInverter inverter;
-	
 	@Reference
-	void bindStringInverter(StringInverter inverter) {
-		this.inverter = inverter;
-	}
-
-	void unbindStringInverter(StringInverter inverter) {
-		this.inverter = null;
-	}
+	private StringInverter inverter;
 	
 	public void invert(String input) {
 		System.out.println(inverter.invert(input));

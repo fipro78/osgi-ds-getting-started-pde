@@ -1,0 +1,8 @@
+Bundle-Name: Inverter Command
+Bundle-SymbolicName: org.fipro.inverter.command
+Bundle-Vendor: 
+Bundle-Version: 1.0.0.qualifier
+Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: org.fipro.inverter.command
+-buildpath: \
+    org.fipro.inverter.api
