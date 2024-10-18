@@ -1,13 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
+Automatic-Module-Name: org.fipro.inverter.integration.tests
+Bundle-ActivationPolicy: lazy
 Bundle-Name: Inverter Integration Tests
 Bundle-SymbolicName: org.fipro.inverter.integration.tests
 Bundle-Version: 1.0.0.qualifier
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Require-Bundle: org.junit;bundle-version="4.12.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Import-Package: org.fipro.inverter;version="1.0.0",
- org.osgi.framework;version="1.8.0",
- org.osgi.util.tracker;version="1.5.1"
-Bundle-ActivationPolicy: lazy
+ org.junit.jupiter.api;version="[5.11.0,6.0.0)",
+ org.junit.jupiter.api.extension;version="[5.11.0,6.0.0)",
+ org.osgi.test.common.annotation;version="[1.2.0,2.0.0)",
+ org.osgi.test.junit5.service;version="[1.2.0,2.0.0)"
 Require-Capability: osgi.service;
   filter:="(objectClass=org.fipro.inverter.StringInverter)"

@@ -203,12 +203,14 @@ In the _Plug-in Development Perspective_
         </p>
     - Click _Finish_
     - If you do not see the tabs at the bottom of the recently opened editor with name _org.fipro.inverter.api_, close the editor and open the  _pde.bnd_ file in the project _org.fipro.inverter.api_.
-        - Switch to the _pde.bnd_ tab and verify the content
+        - Switch to the _pde.bnd_ tab
+          - Add the `-runee` instruction to create the requirement on Java 17
             ```
             Bundle-Name: Inverter Service API
             Bundle-SymbolicName: org.fipro.inverter.api
             Bundle-Vendor: 
             Bundle-Version: 1.0.0.qualifier
+            -runee: JavaSE-17
             ```
 
 _**Note:**_  
@@ -296,6 +298,7 @@ In the Plug-in Perspective create a new Plug-in Project via _File -> New -> Plug
     - If you do not see the tabs at the bottom of the recently opened editor with name _org.fipro.inverter.provider_, close the editor and open the  _pde.bnd_ file in the project _org.fipro.inverter.provider_.
         - Switch to the _pde.bnd_ tab
             - Add the `Bundle-ActivationPolicy` to get the bundle automatically started in an Equinox runtime
+            - Add the `-runee` instruction to create the requirement on Java 17
             - Add the `-buildpath` instruction to specify the dependency to the API bundle
             ```
             Bundle-Name: Inverter Provider
@@ -303,6 +306,7 @@ In the Plug-in Perspective create a new Plug-in Project via _File -> New -> Plug
             Bundle-Vendor: 
             Bundle-Version: 1.0.0.qualifier
             Bundle-ActivationPolicy: lazy
+            -runee: JavaSE-17
             -buildpath: \
                 org.fipro.inverter.api
             ```
@@ -423,6 +427,7 @@ The Eclipse OSGi console is based on the Felix Gogo Shell. We can therefore easi
     - If you do not see the tabs at the bottom of the recently opened editor with name _org.fipro.inverter.command_, close the editor and open the  _pde.bnd_ file in the project _org.fipro.inverter.command_.
         - Switch to the _pde.bnd_ tab
             - Add the `Bundle-ActivationPolicy` to get the bundle automatically started in an Equinox runtime
+            - Add the `-runee` instruction to create the requirement on Java 17
             - Add the `-buildpath` instruction to specify the dependency to the API bundle
             ```
             Bundle-Name: Inverter Command
@@ -430,6 +435,7 @@ The Eclipse OSGi console is based on the Felix Gogo Shell. We can therefore easi
             Bundle-Vendor: 
             Bundle-Version: 1.0.0.qualifier
             Bundle-ActivationPolicy: lazy
+            -runee: JavaSE-17
             -buildpath: \
                 org.fipro.inverter.api
             ```
