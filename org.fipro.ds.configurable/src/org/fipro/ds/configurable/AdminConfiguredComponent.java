@@ -1,7 +1,5 @@
 package org.fipro.ds.configurable;
 
-import java.util.Map;
-
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ConfigurationPolicy;
@@ -16,17 +14,17 @@ import org.osgi.service.component.annotations.Modified;
 public class AdminConfiguredComponent {
 
     @Activate
-    void activate(Map<String, Object> properties) {
+    void activate(MessageConfig config) {
         System.out.println();
         System.out.println("AdminConfiguredComponent activated");
-        printMessage(properties);
+        printMessage(config);
     }
 
     @Modified
-    void modified(Map<String, Object> properties) {
+    void modified(MessageConfig config) {
         System.out.println();
         System.out.println("AdminConfiguredComponent modified");
-        printMessage(properties);
+        printMessage(config);
     }
 
     @Deactivate
@@ -35,14 +33,13 @@ public class AdminConfiguredComponent {
         System.out.println();
     }
 
-    private void printMessage(Map<String, Object> properties) {
-        String msg = (String) properties.get("message");
-        Integer iter = (Integer) properties.get("iteration");
+    private void printMessage(MessageConfig config) {
+        String msg = config.message();
+        int iter = config.iteration();
 
-        if (msg != null && iter != null) {
-            for (int i = 1; i <= iter; i++) {
-                System.out.println(i + ": " + msg);
-            }
+        for (int i = 1; i <= iter; i++) {
+            System.out.println(i + ": " + msg);
         }
+        System.out.println();
     }
 }

@@ -1,14 +1,13 @@
 package org.fipro.ds.data.online;
 
 import org.fipro.ds.data.DataService;
+import org.fipro.ds.data.FiproConnectivity;
 import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.propertytypes.ServiceRanking;
 
-@Component(
-	property = {
-			"fipro.connectivity=online",
-			"service.ranking:Integer=7"
-	}
-)
+@Component
+@FiproConnectivity("online")
+@ServiceRanking(7)
 public class OnlineDataService implements DataService {
 
     @Override

@@ -3,16 +3,18 @@ package org.fipro.ds.data.offline;
 import java.util.Map;
 
 import org.fipro.ds.data.DataService;
+import org.fipro.ds.data.FiproConnectivity;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.propertytypes.ServiceRanking;
 
 @Component(
-    property= {
-        "fipro.connectivity=offline",
-        "service.ranking:Integer=5",
-        ".private=private configuration"
-    }
+	property = {
+		".private=private configuration"
+	}
 )
+@FiproConnectivity("offline")
+@ServiceRanking(5)
 public class OfflineDataService implements DataService {
 
 	@Activate

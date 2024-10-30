@@ -1,0 +1,5 @@
+Bundle-Name: Data API
+Bundle-SymbolicName: org.fipro.ds.data.api
+Bundle-Vendor: 
+Bundle-Version: 1.0.0.qualifier
+-runee: JavaSE-17

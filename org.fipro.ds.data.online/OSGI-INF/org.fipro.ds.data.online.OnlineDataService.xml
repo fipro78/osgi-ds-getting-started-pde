@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="org.fipro.ds.data.online.OnlineDataService">
-   <property name="fipro.connectivity" value="online"/>
-   <property name="service.ranking" type="Integer" value="7"/>
-   <service>
-      <provide interface="org.fipro.ds.data.DataService"/>
-   </service>
-   <implementation class="org.fipro.ds.data.online.OnlineDataService"/>
-</scr:component>

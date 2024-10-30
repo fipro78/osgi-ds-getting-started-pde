@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" name="org.fipro.ds.configurable.StaticConfiguredComponent">
-   <property name="message" value="Welcome to the inline configured service"/>
-   <property name="iteration" type="Integer" value="3"/>
-   <implementation class="org.fipro.ds.configurable.StaticConfiguredComponent"/>
-</scr:component>

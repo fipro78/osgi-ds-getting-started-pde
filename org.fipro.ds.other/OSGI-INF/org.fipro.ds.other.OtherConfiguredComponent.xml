@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.2.0" activate="activate" configuration-pid="AdminConfiguredComponent" configuration-policy="require" deactivate="deactivate" modified="modified" name="org.fipro.ds.other.OtherConfiguredComponent">
-   <implementation class="org.fipro.ds.other.OtherConfiguredComponent"/>
-</scr:component>

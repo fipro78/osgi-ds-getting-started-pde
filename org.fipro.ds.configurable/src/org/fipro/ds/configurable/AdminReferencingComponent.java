@@ -11,6 +11,7 @@ import org.osgi.service.component.annotations.Reference;
 @Component
 public class AdminReferencingComponent {
 
+	@Reference(bind="setAdminConfiguredComponent")
     AdminConfiguredComponent component;
 
     @Activate
@@ -28,27 +29,24 @@ public class AdminReferencingComponent {
         System.out.println("AdminReferencingComponent deactivated");
     }
 
-    @Reference
-    void setAdminConfiguredComponent(
-        AdminConfiguredComponent comp, Map<String, Object> properties) {
+    void setAdminConfiguredComponent(Map<String, Object> properties) {
         System.out.println("AdminReferencingComponent: set service");
         printMessage(properties);
     }
 
-    void updatedAdminConfiguredComponent(
-        AdminConfiguredComponent comp, Map<String, Object> properties) {
+    void updatedAdminConfiguredComponent(Map<String, Object> properties) {
         System.out.println("AdminReferencingComponent: update service");
         printMessage(properties);
     }
 
-    void unsetAdminConfiguredComponent(
-        AdminConfiguredComponent comp) {
+    void unsetAdminConfiguredComponent(Map<String, Object> properties) {
         System.out.println("AdminReferencingComponent: unset service");
     }
 
     private void printMessage(Map<String, Object> properties) {
-        String msg = (String) properties.get("message");
-        Integer iter = (Integer) properties.get("iteration");
+        String msg = properties.getOrDefault("message", "").toString();
+        int iter = ((Number)properties.getOrDefault("iteration", 0)).intValue();
         System.out.println("[" + msg + "|" + iter + "]");
+        System.out.println();
     }
 }

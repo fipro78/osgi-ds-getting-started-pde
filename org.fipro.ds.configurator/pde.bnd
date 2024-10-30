@@ -1,0 +1,11 @@
+Bundle-Name: Service Configurator
+Bundle-SymbolicName: org.fipro.ds.configurator
+Bundle-Vendor: 
+Bundle-Version: 1.0.0.qualifier
+Bundle-ActivationPolicy: lazy
+-buildpath: \
+	org.osgi.service.cm,\
+	org.fipro.ds.data.api,\
+	org.osgi.service.component,\
+	org.osgi.service.condition
+-runee: JavaSE-17

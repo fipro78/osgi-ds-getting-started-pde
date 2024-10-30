@@ -33,7 +33,7 @@ public class ToggleConnectivityCommand {
         Object target = null;
         if (config != null && config.getProperties() != null) {
         	props = config.getProperties();
-        	target = props.get("DataService.target");
+        	target = props.get("dataServices.target");
         } else {
             props = new Hashtable<String, Object>();
         }
@@ -44,7 +44,7 @@ public class ToggleConnectivityCommand {
         StringBuilder filter = new StringBuilder("(fipro.connectivity=");
         filter.append(isOnline ? "offline" : "online").append(")");
 
-        props.put("DataService.target", filter.toString());
+        props.put("dataServices.target", filter.toString());
         config.update(props);
     }
 }

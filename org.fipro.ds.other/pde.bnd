@@ -1,0 +1,6 @@
+Bundle-Name: Other Service
+Bundle-SymbolicName: org.fipro.ds.other
+Bundle-Vendor: 
+Bundle-Version: 1.0.0.qualifier
+Bundle-ActivationPolicy: lazy
+-runee: JavaSE-17

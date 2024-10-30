@@ -1,0 +1,9 @@
+Bundle-Name: Online Data Provider
+Bundle-SymbolicName: org.fipro.ds.data.online
+Bundle-Vendor: 
+Bundle-Version: 1.0.0.qualifier
+Bundle-ActivationPolicy: lazy
+-runee: JavaSE-17
+-buildpath: \
+	org.fipro.ds.data.api,\
+	org.osgi.service.component

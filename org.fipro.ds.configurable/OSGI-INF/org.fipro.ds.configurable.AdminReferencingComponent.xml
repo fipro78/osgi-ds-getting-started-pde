@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.2.0" activate="activate" deactivate="deactivate" modified="modified" name="org.fipro.ds.configurable.AdminReferencingComponent">
-   <reference bind="setAdminConfiguredComponent" cardinality="1..1" interface="org.fipro.ds.configurable.AdminConfiguredComponent" name="AdminConfiguredComponent" policy="static" unbind="unsetAdminConfiguredComponent" updated="updatedAdminConfiguredComponent"/>
-   <implementation class="org.fipro.ds.configurable.AdminReferencingComponent"/>
-</scr:component>

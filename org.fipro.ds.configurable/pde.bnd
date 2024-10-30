@@ -1,0 +1,8 @@
+Bundle-Name: Configurable Services
+Bundle-SymbolicName: org.fipro.ds.configurable
+Bundle-Vendor: 
+Bundle-Version: 1.0.0.qualifier
+Bundle-ActivationPolicy: lazy
+-runee: JavaSE-17
+-buildpath: org.osgi.service.cm
+-includeresource: OSGI-INF/config.properties=config.properties

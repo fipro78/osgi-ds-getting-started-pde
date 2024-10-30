@@ -1,14 +1,11 @@
 package org.fipro.ds.configurator;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import org.fipro.ds.data.DataService;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
-import org.osgi.service.component.annotations.ReferenceCardinality;
-import org.osgi.service.component.annotations.ReferencePolicy;
 
 @Component(
     property= {
@@ -18,26 +15,21 @@ import org.osgi.service.component.annotations.ReferencePolicy;
 )
 public class DataRetriever {
 
-    private List<DataService> dataServices = new ArrayList<>();
+	@Reference(
+		bind = "addDataService",
+		target="(fipro.connectivity=online)")
+    private volatile List<DataService> dataServices;
 
-    @Reference(
-        cardinality=ReferenceCardinality.MULTIPLE,
-        policy=ReferencePolicy.DYNAMIC,
-        target="(fipro.connectivity=online)"
-    )
-    void addDataService(DataService service, Map<String, Object> properties) {
-        this.dataServices.add(service);
-        
-        System.out.println("Added " + service.getClass().getName());
+    void addDataService(Map<String, Object> properties) {
+        System.out.println("Added " + properties.get("component.name"));
         properties.forEach((k, v) -> {
             System.out.println(k+"="+v);
         });
         System.out.println();
     }
 
-    void removeDataService(DataService service) {
-        this.dataServices.remove(service);
-        System.out.println("Removed " + service.getClass().getName());
+    void removeDataService(Map<String, Object> properties) {
+        System.out.println("Removed " + properties.get("component.name"));
     }
 
     public void retrieve(int id) {

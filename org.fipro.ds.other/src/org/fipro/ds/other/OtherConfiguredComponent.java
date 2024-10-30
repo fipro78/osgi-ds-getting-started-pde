@@ -35,13 +35,11 @@ public class OtherConfiguredComponent {
     }
 
     private void printMessage(Map<String, Object> properties) {
-        String msg = (String) properties.get("message");
-        Integer iter = (Integer) properties.get("iteration");
+        String msg = properties.getOrDefault("message", "").toString();
+        int iter = ((Number)properties.getOrDefault("iteration", 0)).intValue();
 
-        if (msg != null && iter != null) {
-            for (int i = 1; i <= iter; i++) {
-                System.out.println(i + ": " + msg);
-            }
+        for (int i = 1; i <= iter; i++) {
+            System.out.println(i + ": " + msg);
         }
     }
 }

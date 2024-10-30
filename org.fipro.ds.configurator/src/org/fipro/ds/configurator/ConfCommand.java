@@ -17,16 +17,11 @@ import org.osgi.service.component.annotations.Reference;
 )
 public class ConfCommand {
 
+	@Reference
     ConfigurationAdmin cm;
 
-    @Reference
-    void setConfigurationAdmin(ConfigurationAdmin cm) {
-        this.cm = cm;
-    }
-
     public void conf(String msg, int count) throws IOException {
-        Configuration config =
-            cm.getConfiguration("AdminConfiguredComponent", "?");
+        Configuration config = cm.getConfiguration("AdminConfiguredComponent", "?");
         Hashtable<String, Object> props = new Hashtable<>();
         props.put("message", msg);
         props.put("iteration", count);
