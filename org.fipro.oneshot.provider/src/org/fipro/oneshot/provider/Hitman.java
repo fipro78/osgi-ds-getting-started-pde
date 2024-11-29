@@ -6,8 +6,9 @@ import org.fipro.oneshot.OneShot;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
+import org.osgi.service.component.annotations.ServiceScope;
 
-@Component(servicefactory=true)
+@Component(scope = ServiceScope.PROTOTYPE)
 public class Hitman implements OneShot {
 
     private static AtomicInteger instanceCounter = new AtomicInteger(); 

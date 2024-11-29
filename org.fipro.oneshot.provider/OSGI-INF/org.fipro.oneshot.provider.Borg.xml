@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.2.0" activate="activate" configuration-pid="org.fipro.oneshot.Borg" configuration-policy="require" modified="modified" name="org.fipro.oneshot.provider.Borg">
-   <service>
-      <provide interface="org.fipro.oneshot.OneShot"/>
-   </service>
-   <implementation class="org.fipro.oneshot.provider.Borg"/>
-</scr:component>

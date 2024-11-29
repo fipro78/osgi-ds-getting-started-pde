@@ -3,6 +3,7 @@ package org.fipro.oneshot.assassinate;
 import org.fipro.oneshot.OneShot;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.component.annotations.ReferenceScope;
 
 @Component(
     property= {
@@ -12,12 +13,8 @@ import org.osgi.service.component.annotations.Reference;
 )
 public class AssassinateCommand {
 
+	@Reference(scope=ReferenceScope.PROTOTYPE_REQUIRED)
     private OneShot hitman;
-
-    @Reference
-    void setOneShot(OneShot oneShot) {
-        this.hitman = oneShot;
-    }
 
     public void assassinate(String target) {
         hitman.shoot(target);

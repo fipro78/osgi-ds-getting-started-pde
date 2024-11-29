@@ -1,0 +1,11 @@
+Bundle-Name: Oneshot Command
+Bundle-SymbolicName: org.fipro.oneshot.command
+Bundle-Version: 1.0.0.qualifier
+Bundle-ActivationPolicy: lazy
+-runee: JavaSE-17
+-buildpath: \
+	org.osgi.service.component,\
+	org.osgi.service.cm,\
+	org.fipro.oneshot.api,\
+	org.eclipse.osgi,\
+	org.apache.felix.gogo.runtime

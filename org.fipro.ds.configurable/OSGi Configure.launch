@@ -14,6 +14,10 @@
     <setAttribute key="deselected_workspace_bundles">
         <setEntry value="org.fipro.inverter.integration.tests"/>
         <setEntry value="org.fipro.inverter.provider.tests"/>
+        <setEntry value="org.fipro.oneshot.api"/>
+        <setEntry value="org.fipro.oneshot.assassinate"/>
+        <setEntry value="org.fipro.oneshot.command"/>
+        <setEntry value="org.fipro.oneshot.provider"/>
     </setAttribute>
     <booleanAttribute key="includeOptional" value="true"/>
     <booleanAttribute key="org.eclipse.debug.core.ATTR_FORCE_SYSTEM_CONSOLE_ENCODING" value="false"/>

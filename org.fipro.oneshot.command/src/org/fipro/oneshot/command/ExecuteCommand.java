@@ -1,37 +1,26 @@
 package org.fipro.oneshot.command;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.ListIterator;
 
 import org.fipro.oneshot.OneShot;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
-import org.osgi.service.component.annotations.ReferenceCardinality;
-import org.osgi.service.component.annotations.ReferencePolicy;
 
 @Component(
     property= {
         "osgi.command.scope=fipro",
-        "osgi.command.function=execute"},
-    service=ExecuteCommand.class
-)
+        "osgi.command.function=execute"
+    },
+    service=ExecuteCommand.class ) 
 public class ExecuteCommand {
 
-    private List<OneShot> borgs = new ArrayList<>();
+    @Reference(target="(service.factoryPid=Borg)")
+    private volatile List<OneShot> borgs;
 
-    @Reference(
-    		cardinality=ReferenceCardinality.MULTIPLE,
-    		policy=ReferencePolicy.DYNAMIC,
-    		target="(service.factoryPid=org.fipro.oneshot.Borg)")
-    void addBorg(OneShot borg) {
-    	this.borgs.add(borg);
-    }
-    
-    void removeBorg(OneShot borg) {
-    	this.borgs.remove(borg);
-    }
-    
-    public void execute(String target) {
-    	this.borgs.forEach(s -> s.shoot(target));
-    }
+    public void execute(String target) { 
+        for (ListIterator<OneShot> it = borgs.listIterator(borgs.size()); it.hasPrevious(); ) { 
+            it.previous().shoot(target); 
+        } 
+    } 
 }

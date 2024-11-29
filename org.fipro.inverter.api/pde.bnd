@@ -1,7 +1,6 @@
 Bundle-Name: Inverter Service API
 Bundle-SymbolicName: org.fipro.inverter.api
-Bundle-Version: 1.0.0
-Bundle-Vendor: 
 Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: 
 Automatic-Module-Name: org.fipro.inverter.api
 -runee: JavaSE-17

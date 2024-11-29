@@ -14,12 +14,8 @@ import org.osgi.service.component.annotations.Reference;
 )
 public class KillCommand {
 
+	@Reference
     private OneShot killer;
-
-    @Reference
-    void setOneShot(OneShot oneShot) {
-        this.killer = oneShot;
-    }
 
     @Activate
     void activate() {
@@ -34,6 +30,6 @@ public class KillCommand {
     }
     
     public void kill(String target) {
-        killer.shoot(target);
+        this.killer.shoot(target);
     }
 }

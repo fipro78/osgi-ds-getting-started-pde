@@ -1,0 +1,15 @@
+-buildpath: \
+	org.osgi.service.component,\
+	org.osgi.util.function,\
+	org.eclipse.osgi,\
+	org.osgi.util.promise,\
+	org.fipro.oneshot.api
+-runee: JavaSE-1.8
+-sources: false
+Bundle-ActivationPolicy: lazy
+Bundle-Name: Assassinate Command Bundle
+Bundle-SymbolicName: org.fipro.oneshot.assassinate
+Bundle-Version: 1.0.0.qualifier
+Service-Component: \
+	OSGI-INF/org.fipro.oneshot.assassinate.AssassinateCommand.xml,\
+	OSGI-INF/org.fipro.oneshot.assassinate.EliminateCommand.xml

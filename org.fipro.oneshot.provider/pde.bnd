@@ -1,0 +1,7 @@
+Bundle-Name: Oneshot Service Provider
+Bundle-SymbolicName: org.fipro.oneshot.provider
+Bundle-Version: 1.0.0.qualifier
+Bundle-ActivationPolicy: lazy
+-runee: JavaSE-17
+-buildpath: \
+	org.fipro.oneshot.api

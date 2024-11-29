@@ -12,8 +12,19 @@
     <booleanAttribute key="default_auto_start" value="true"/>
     <intAttribute key="default_start_level" value="4"/>
     <setAttribute key="deselected_workspace_bundles">
+        <setEntry value="org.fipro.ds.config"/>
+        <setEntry value="org.fipro.ds.configurable"/>
+        <setEntry value="org.fipro.ds.configurator"/>
+        <setEntry value="org.fipro.ds.data.api"/>
+        <setEntry value="org.fipro.ds.data.offline"/>
+        <setEntry value="org.fipro.ds.data.online"/>
+        <setEntry value="org.fipro.ds.other"/>
         <setEntry value="org.fipro.inverter.integration.tests"/>
         <setEntry value="org.fipro.inverter.provider.tests"/>
+        <setEntry value="org.fipro.oneshot.api"/>
+        <setEntry value="org.fipro.oneshot.assassinate"/>
+        <setEntry value="org.fipro.oneshot.command"/>
+        <setEntry value="org.fipro.oneshot.provider"/>
     </setAttribute>
     <booleanAttribute key="includeOptional" value="true"/>
     <booleanAttribute key="org.eclipse.debug.core.ATTR_FORCE_SYSTEM_CONSOLE_ENCODING" value="false"/>

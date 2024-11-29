@@ -93,6 +93,20 @@
 		<module>org.fipro.inverter.provider</module>
 		<module>org.fipro.inverter.provider.tests</module>
 		<module>org.fipro.inverter.integration.tests</module>
+
+		<module>org.fipro.ds.config</module>
+		<module>org.fipro.ds.configurable</module>
+		<module>org.fipro.ds.configurator</module>
+		<module>org.fipro.ds.data.api</module>
+		<module>org.fipro.ds.data.offline</module>
+		<module>org.fipro.ds.data.online</module>
+		<module>org.fipro.ds.other</module>
+
+		<module>org.fipro.oneshot.api</module>
+		<module>org.fipro.oneshot.assassinate</module>
+		<module>org.fipro.oneshot.command</module>
+		<module>org.fipro.oneshot.provider</module>
+
 		<!--		
 		<module>org.fipro.headless.app</module>
 		<module>org.fipro.headless.product</module>

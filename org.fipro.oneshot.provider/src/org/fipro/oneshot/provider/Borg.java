@@ -10,34 +10,40 @@ import org.osgi.service.component.annotations.ConfigurationPolicy;
 import org.osgi.service.component.annotations.Modified;
 
 @Component(
-    configurationPid="org.fipro.oneshot.Borg",
-    configurationPolicy=ConfigurationPolicy.REQUIRE)
+    configurationPid="Borg",
+    configurationPolicy=ConfigurationPolicy.REQUIRE) 
 public class Borg implements OneShot {
 
-    private static AtomicInteger instanceCounter = new AtomicInteger();
-
-    private final int instanceNo;
-    private String name;
-
-    public Borg() {
-        instanceNo = instanceCounter.incrementAndGet();
+    @interface BorgConfig { 
+        String name() default ""; 
     }
 
     @Activate
-    void activate(Map<String, Object> properties) {
-        this.name = (String) properties.get("name");
-    }
+    BorgConfig config;
+    
+    private static AtomicInteger instanceCounter = new AtomicInteger();
+    private final int instanceNo;
 
+    public Borg() { 
+        instanceNo = instanceCounter.incrementAndGet(); 
+    }
+    
+    @Activate
+    void activate(Map<String, Object> properties) {
+        properties.forEach((k, v) -> {
+            System.out.println(k+"="+v);
+        });
+        System.out.println();
+    }
+    
     @Modified
-    void modified(Map<String, Object> properties) {
-    	this.name = (String) properties.get("name");
+    void modified(BorgConfig config) { 
+        this.config = config; 
     }
 
     @Override
-    public void shoot(String target) {
-        System.out.println("Borg " + name
-            + " #" + instanceNo + " of "+ instanceCounter.get()
-            + " took orders and executed " + target);
+    public void shoot(String target) { 
+        System.out.println("Borg " + config.name() + " #" + instanceNo + " of "+ instanceCounter.get()
+            + " took orders and executed " + target); 
     }
-
 }

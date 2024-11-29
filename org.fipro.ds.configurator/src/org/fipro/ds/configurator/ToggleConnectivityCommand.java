@@ -18,12 +18,8 @@ import org.osgi.service.component.annotations.Reference;
 )
 public class ToggleConnectivityCommand {
 
+	@Reference
     ConfigurationAdmin admin;
-
-    @Reference
-    void setConfigurationAdmin(ConfigurationAdmin admin) {
-        this.admin = admin;
-    }
 
     public void toggle() throws IOException {
         Configuration config =
@@ -35,7 +31,7 @@ public class ToggleConnectivityCommand {
         	props = config.getProperties();
         	target = props.get("dataServices.target");
         } else {
-            props = new Hashtable<String, Object>();
+            props = new Hashtable<>();
         }
 
         boolean isOnline = (target == null || target.toString().contains("online"));
