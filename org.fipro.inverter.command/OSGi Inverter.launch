@@ -19,6 +19,7 @@
         <setEntry value="org.fipro.ds.data.offline"/>
         <setEntry value="org.fipro.ds.data.online"/>
         <setEntry value="org.fipro.ds.other"/>
+        <setEntry value="org.fipro.inverter.http"/>
         <setEntry value="org.fipro.inverter.integration.tests"/>
         <setEntry value="org.fipro.inverter.provider.tests"/>
         <setEntry value="org.fipro.oneshot.api"/>

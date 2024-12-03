@@ -1,11 +1,13 @@
 package org.fipro.inverter.http;
 
-import javax.servlet.ServletRequestEvent;
-import javax.servlet.ServletRequestListener;
+import jakarta.servlet.ServletRequestEvent;
+import jakarta.servlet.ServletRequestListener;
 
 import org.osgi.service.component.annotations.Component;
+import org.osgi.service.servlet.whiteboard.propertytypes.HttpWhiteboardListener;
 
-@Component(property = "osgi.http.whiteboard.listener=true")
+@Component
+@HttpWhiteboardListener
 public class SimpleServletRequestListener
     implements ServletRequestListener {
 

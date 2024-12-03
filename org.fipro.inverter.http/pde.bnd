@@ -1,0 +1,11 @@
+Bundle-Name: Inverter Servlet
+Bundle-SymbolicName: org.fipro.inverter.http
+Bundle-Vendor: 
+Bundle-Version: 1.0.0.qualifier
+Bundle-ActivationPolicy: lazy
+-runee: JavaSE-17
+-buildpath: \
+    org.fipro.inverter.api, \
+	org.apache.felix.http.servlet-api,\
+	org.osgi.service.servlet
+-includeresource: resources=resources

@@ -2,22 +2,20 @@ package org.fipro.inverter.http;
 
 import java.io.IOException;
 
-import javax.servlet.Servlet;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.Servlet;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ServiceScope;
+import org.osgi.service.servlet.whiteboard.propertytypes.HttpWhiteboardServletErrorPage;
 
 @Component(
     service=Servlet.class,
-    property= {
-        "osgi.http.whiteboard.servlet.errorPage=java.lang.IllegalArgumentException",
-        "osgi.http.whiteboard.servlet.errorPage=500"
-    },
     scope=ServiceScope.PROTOTYPE)
+@HttpWhiteboardServletErrorPage(errorPage = { "java.lang.IllegalArgumentException" , "500"} )
 public class ErrorServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;

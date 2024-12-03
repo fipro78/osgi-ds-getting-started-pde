@@ -12,6 +12,7 @@
     <booleanAttribute key="default_auto_start" value="true"/>
     <intAttribute key="default_start_level" value="4"/>
     <setAttribute key="deselected_workspace_bundles">
+        <setEntry value="org.fipro.inverter.http"/>
         <setEntry value="org.fipro.inverter.integration.tests"/>
         <setEntry value="org.fipro.inverter.provider.tests"/>
         <setEntry value="org.fipro.oneshot.api"/>

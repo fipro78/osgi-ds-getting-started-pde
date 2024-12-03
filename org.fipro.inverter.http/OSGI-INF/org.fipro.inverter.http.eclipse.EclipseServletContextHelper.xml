@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="org.fipro.inverter.http.eclipse.EclipseServletContextHelper">
-   <property name="osgi.http.whiteboard.context.name" value="eclipse"/>
-   <property name="osgi.http.whiteboard.context.path" value="/eclipse"/>
-   <service scope="bundle">
-      <provide interface="org.osgi.service.http.context.ServletContextHelper"/>
-   </service>
-   <implementation class="org.fipro.inverter.http.eclipse.EclipseServletContextHelper"/>
-</scr:component>

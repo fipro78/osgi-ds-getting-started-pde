@@ -20,6 +20,7 @@
         <setEntry value="org.fipro.ds.other"/>
         <setEntry value="org.fipro.inverter.api"/>
         <setEntry value="org.fipro.inverter.command"/>
+        <setEntry value="org.fipro.inverter.http"/>
         <setEntry value="org.fipro.inverter.integration.tests"/>
         <setEntry value="org.fipro.inverter.provider"/>
         <setEntry value="org.fipro.inverter.provider.tests"/>
