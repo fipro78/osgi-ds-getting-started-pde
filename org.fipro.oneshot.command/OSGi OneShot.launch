@@ -24,6 +24,10 @@
         <setEntry value="org.fipro.inverter.integration.tests"/>
         <setEntry value="org.fipro.inverter.provider"/>
         <setEntry value="org.fipro.inverter.provider.tests"/>
+        <setEntry value="org.fipro.mafia.boss"/>
+        <setEntry value="org.fipro.mafia.common"/>
+        <setEntry value="org.fipro.mafia.soldier"/>
+        <setEntry value="org.fipro.mafia.ui"/>
     </setAttribute>
     <booleanAttribute key="includeOptional" value="true"/>
     <booleanAttribute key="org.eclipse.debug.core.ATTR_FORCE_SYSTEM_CONSOLE_ENCODING" value="false"/>

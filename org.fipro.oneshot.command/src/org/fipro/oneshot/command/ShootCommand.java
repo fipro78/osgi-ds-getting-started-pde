@@ -16,7 +16,7 @@ import org.osgi.service.component.annotations.Reference;
 )
 public class ShootCommand {
 
-	@Reference(target = "(&(component.factory=fipro.oneshot.factory)(organization=marine))")
+	@Reference(target = "(component.factory=fipro.oneshot.factory)")
     private ComponentFactory<OneShot> factory;
 
     public void shoot(String target) {

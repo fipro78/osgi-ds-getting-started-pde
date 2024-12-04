@@ -1,0 +1,6 @@
+Bundle-Name: Mafia Common
+Bundle-SymbolicName: org.fipro.mafia.common
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: 
+Automatic-Module-Name: org.fipro.mafia.common
+-runee: JavaSE-17

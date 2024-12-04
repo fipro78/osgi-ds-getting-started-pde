@@ -1,0 +1,10 @@
+Bundle-Name: Mafia Boss
+Bundle-SymbolicName: org.fipro.mafia.boss
+Bundle-Vendor: 
+Bundle-Version: 1.0.0.qualifier
+Bundle-ActivationPolicy: lazy
+-runee: JavaSE-17
+-buildpath: \
+    org.osgi.service.event,\
+	org.apache.felix.gogo.runtime,\
+	org.fipro.mafia.common

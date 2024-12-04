@@ -11,7 +11,7 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<tycho.version>4.0.9</tycho.version>
+		<tycho.version>4.0.10</tycho.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>17</java.version>
 	</properties>
@@ -93,6 +93,7 @@
 		<module>org.fipro.inverter.provider</module>
 		<module>org.fipro.inverter.provider.tests</module>
 		<module>org.fipro.inverter.integration.tests</module>
+		<module>org.fipro.inverter.http</module>
 
 		<module>org.fipro.ds.config</module>
 		<module>org.fipro.ds.configurable</module>
@@ -107,6 +108,10 @@
 		<module>org.fipro.oneshot.command</module>
 		<module>org.fipro.oneshot.provider</module>
 
+		<module>org.fipro.mafia.common</module>
+		<module>org.fipro.mafia.boss</module>
+		<module>org.fipro.mafia.soldier</module>
+		
 		<!--		
 		<module>org.fipro.headless.app</module>
 		<module>org.fipro.headless.product</module>

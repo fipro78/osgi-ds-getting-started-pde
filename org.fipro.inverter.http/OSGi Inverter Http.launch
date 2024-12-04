@@ -21,6 +21,10 @@
         <setEntry value="org.fipro.inverter.command"/>
         <setEntry value="org.fipro.inverter.integration.tests"/>
         <setEntry value="org.fipro.inverter.provider.tests"/>
+        <setEntry value="org.fipro.mafia.boss"/>
+        <setEntry value="org.fipro.mafia.common"/>
+        <setEntry value="org.fipro.mafia.soldier"/>
+        <setEntry value="org.fipro.mafia.ui"/>
         <setEntry value="org.fipro.oneshot.api"/>
         <setEntry value="org.fipro.oneshot.assassinate"/>
         <setEntry value="org.fipro.oneshot.command"/>

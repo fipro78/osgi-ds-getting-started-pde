@@ -5,11 +5,14 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.event.Event;
 import org.osgi.service.event.EventConstants;
 import org.osgi.service.event.EventHandler;
+import org.osgi.service.event.propertytypes.EventDelivery;
+import org.osgi.service.event.propertytypes.EventFilter;
+import org.osgi.service.event.propertytypes.EventTopics;
 
-@Component(
-	property = {
-		EventConstants.EVENT_TOPIC + "=" + MafiaBossConstants.TOPIC_ALL,
-		EventConstants.EVENT_FILTER + "=" + "(!(target=Sonny))"})
+@Component
+@EventTopics(MafiaBossConstants.TOPIC_ALL)
+@EventFilter("(!(target=Sonny))")
+@EventDelivery(EventConstants.DELIVERY_ASYNC_UNORDERED)
 public class Ray implements EventHandler {
 
     @Override
