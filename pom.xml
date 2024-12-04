@@ -112,9 +112,7 @@
 		<module>org.fipro.mafia.boss</module>
 		<module>org.fipro.mafia.soldier</module>
 		
-		<!--		
 		<module>org.fipro.headless.app</module>
 		<module>org.fipro.headless.product</module>
-		-->
 	</modules>
 </project> 

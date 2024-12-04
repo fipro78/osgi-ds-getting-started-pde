@@ -1,0 +1,10 @@
+Bundle-Name: Headless App
+Bundle-SymbolicName: org.fipro.headless.app
+Bundle-Vendor: 
+Bundle-Version: 1.0.0.qualifier
+Bundle-ActivationPolicy: lazy
+-runee: JavaSE-17
+-buildpath: \
+    org.fipro.inverter.api,\
+    org.eclipse.osgi
+-dsannotations-options: norequirements

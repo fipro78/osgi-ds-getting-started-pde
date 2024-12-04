@@ -2,7 +2,7 @@ index: target/index.xml;name="org.fipro.headless.product"
 
 -standalone: ${index}
 
--runee: JavaSE-1.8
+-runee: JavaSE-17
 -runfw: org.eclipse.osgi
 -runsystemcapabilities: ${native_capability}
 
@@ -15,6 +15,7 @@ index: target/index.xml;name="org.fipro.headless.product"
 	org.fipro.inverter.api,\
 	org.fipro.inverter.provider,\
     org.fipro.headless.app,\
-    org.eclipse.osgi.services,\
-    org.eclipse.osgi.util,\
-	org.apache.felix.scr
+	org.apache.felix.scr,\
+	org.osgi.service.component,\
+	org.osgi.util.function,\
+	org.osgi.util.promise

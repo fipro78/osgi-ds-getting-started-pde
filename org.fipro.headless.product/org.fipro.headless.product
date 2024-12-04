@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product uid="org.fipro.headless" version="1.0.0.qualifier" useFeatures="false" includeLaunchers="true">
+<product uid="org.fipro.headless" version="1.0.0.qualifier" type="bundles" includeLaunchers="true" autoIncludeRequirements="false">
 
    <configIni use="default">
    </configIni>
@@ -10,6 +10,8 @@
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
       </vmArgsMac>
    </launcherArgs>
+
+   <windowImages/>
 
    <launcher>
       <win useIco="false">
@@ -27,12 +29,13 @@
       <plugin id="org.apache.felix.scr"/>
       <plugin id="org.eclipse.equinox.console"/>
       <plugin id="org.eclipse.osgi"/>
-      <plugin id="org.eclipse.osgi.services"/>
-      <plugin id="org.eclipse.osgi.util"/>
       <plugin id="org.fipro.headless.app"/>
       <plugin id="org.fipro.inverter.api"/>
       <plugin id="org.fipro.inverter.command"/>
       <plugin id="org.fipro.inverter.provider"/>
+      <plugin id="org.osgi.service.component"/>
+      <plugin id="org.osgi.util.function"/>
+      <plugin id="org.osgi.util.promise"/>
    </plugins>
 
    <configurations>
@@ -40,5 +43,12 @@
       <property name="osgi.noShutdown" value="true" />
       <property name="eclipse.ignoreApp" value="true" />
    </configurations>
+
+   <preferencesInfo>
+      <targetfile overwrite="false"/>
+   </preferencesInfo>
+
+   <cssInfo>
+   </cssInfo>
 
 </product>
