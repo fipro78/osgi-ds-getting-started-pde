@@ -587,6 +587,18 @@ This has actually no impact on the created `Shooter` component instance. These a
 Start the application now, and you will see the output of `Sniper`, but of course the name of the passed properties. 
 If you remove the `shooter.name` property in the `ShootCommand`, you will also see the `shooter.name` configured in the `Sniper` component.
 
+_**Note:**:  
+You will probably see an error like
+```
+Missing requirement: org.fipro.oneshot.command 1.0.0.qualifier requires 'osgi.service; (&(component.factory=fipro.oneshot.factory)(objectClass=org.osgi.service.component.ComponentFactory)(organization=marine))' but it could not be found
+```
+This is because the resolver seems to have issues in resolving the additional filter for `organization=marine`.
+With a _.bndrun_ file you can overcome this resolver issue by adding the following instruction: `-resolve.effective: active;skip:="osgi.service"`.  
+The alternative that works with PDE tooling and Bndtools is to avoid the generation of the Require-Capability header for `osgi.service`. This can be done by adding the following [`dsannotations-options`](https://bnd.bndtools.org/releases/7.0.0/instructions/dsannotations-options.html) instruction to the _pde.bnd_ file  
+```
+-dsannotations-options: norequirements
+```
+
 To make it a bit more fun, let's add some runtime dynamics and add a command that can be used to change the _Target Property_.
 The details about this are explained in [Configuring OSGi Declarative Services - Target Property](configuring-osgi-declarative-services.md#target-property)
 ```java

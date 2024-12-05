@@ -9,3 +9,4 @@ Bundle-ActivationPolicy: lazy
 	org.fipro.oneshot.api,\
 	org.eclipse.osgi,\
 	org.apache.felix.gogo.runtime
+-dsannotations-options: norequirements
