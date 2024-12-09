@@ -229,6 +229,7 @@ public class IntegrationTest {
 
 The test can be executed via _right click -> Run As -> JUnit Plug-in Test_
 
+If you are interested in learning more about `osgi-test`, watch the recording of the following talk be Stefan Bischof: [Testing OSGi with OSGi-Test - OCX 2024](https://youtu.be/3YvvXGoOZAs?si=UHj9lka5MCQIEZmO)
 
 ### Dealing with implicit dependencies
 
@@ -281,7 +282,7 @@ At last we setup a pom-less Tycho build to proof that everything is working as e
   <extension>
     <groupId>org.eclipse.tycho</groupId>
     <artifactId>tycho-build</artifactId>
-    <version>4.0.9</version>
+    <version>4.0.10</version>
   </extension>
 </extensions>
 ```
@@ -301,7 +302,7 @@ At last we setup a pom-less Tycho build to proof that everything is working as e
     <packaging>pom</packaging>
 
     <properties>
-        <tycho.version>4.0.9</tycho.version>
+        <tycho.version>4.0.10</tycho.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>17</java.version>
     </properties>
