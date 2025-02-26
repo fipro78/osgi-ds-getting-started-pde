@@ -11,7 +11,7 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<tycho.version>4.0.10</tycho.version>
+		<tycho.version>4.0.12</tycho.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>17</java.version>
 	</properties>

@@ -14,7 +14,7 @@
 	<packaging>eclipse-repository</packaging>
 
 	<properties>
-		<bnd.version>7.0.0</bnd.version>
+		<bnd.version>7.1.0</bnd.version>
 	</properties>
 
 	<dependencies>
