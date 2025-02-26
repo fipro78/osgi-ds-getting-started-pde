@@ -366,7 +366,7 @@ If you face the error `Default handler for Launcher-Plugin not found in biz.aQut
 
 ```xml
 <properties>
-  <bnd.version>7.0.0</bnd.version>
+  <bnd.version>7.1.0</bnd.version>
 </properties>
 
 <dependencies>

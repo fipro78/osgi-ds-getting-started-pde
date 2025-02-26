@@ -587,7 +587,7 @@ This has actually no impact on the created `Shooter` component instance. These a
 Start the application now, and you will see the output of `Sniper`, but of course the name of the passed properties. 
 If you remove the `shooter.name` property in the `ShootCommand`, you will also see the `shooter.name` configured in the `Sniper` component.
 
-_**Note:**:  
+_**Note:**_  
 You will probably see an error like
 ```
 Missing requirement: org.fipro.oneshot.command 1.0.0.qualifier requires 'osgi.service; (&(component.factory=fipro.oneshot.factory)(objectClass=org.osgi.service.component.ComponentFactory)(organization=marine))' but it could not be found

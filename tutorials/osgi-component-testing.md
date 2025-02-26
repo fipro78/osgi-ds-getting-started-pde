@@ -282,7 +282,7 @@ At last we setup a pom-less Tycho build to proof that everything is working as e
   <extension>
     <groupId>org.eclipse.tycho</groupId>
     <artifactId>tycho-build</artifactId>
-    <version>4.0.10</version>
+    <version>4.0.12</version>
   </extension>
 </extensions>
 ```
@@ -302,7 +302,7 @@ At last we setup a pom-less Tycho build to proof that everything is working as e
     <packaging>pom</packaging>
 
     <properties>
-        <tycho.version>4.0.10</tycho.version>
+        <tycho.version>4.0.12</tycho.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>17</java.version>
     </properties>
