@@ -622,7 +622,7 @@ boolean hasConsole = System.getProperty("osgi.console") != null;
 
 If a console is configured to not stop the application. If there is no configuration for `osgi.console` call `System.exit(0)`.
 
-This tutorial showed a pretty simple example to explain the basic concepts on how to build a command line application from an Eclipse project. A real-world example can be seen in the [APP4MC](https://www.eclipse.org/app4mc/) [Model Migration addon](https://git.eclipse.org/c/app4mc/org.eclipse.app4mc.addon.migration.git/tree/?h=develop), where the above approach is used to create a standalone model migration command line tool. This tool can be used in other environments like in build servers for example, while the integration in the Eclipse IDE remains in the same project structure.
+This tutorial showed a pretty simple example to explain the basic concepts on how to build a command line application from an Eclipse project. A real-world example can be seen in the [APP4MC](https://eclipse.dev/app4mc/) [Model Migration addon](https://gitlab.eclipse.org/eclipse/app4mc/org.eclipse.app4mc.addon.migration), where the above approach is used to create a standalone model migration command line tool. This tool can be used in other environments like in build servers for example, while the integration in the Eclipse IDE remains in the same project structure.
 
 The sources of this tutorial are available on [GitHub](https://github.com/fipro78/osgi-ds-getting-started-pde).
 
